@@ -1,7 +1,13 @@
-from typing import Union
+from typing import Final
 
-Number = Union[int, float]
+# Named constant tax rate (6.75%):
+TAX_RATE: Final[float] = 0.0675
 
-def multiply_numbers(a: Number, b: Number) -> Number:
-    """Return the product of a and b."""
-    return a * b
+def get_sales_tax_amount(meal_amount: float) -> float:
+    """Return sales tax = meal_amount * TAX_RATE."""
+    return meal_amount * TAX_RATE
+
+def get_tip_amount(meal_amount: float, tip_rate: float) -> float:
+    """Return tip amount = meal_amount * tip_rate (tip_rate as decimal, e.g., 0.15)."""
+    return meal_amount * tip_rate
+
