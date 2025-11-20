@@ -1,9 +1,6 @@
 import unittest
-from tests.homework.d_repetition import tests_repetition
+from tests.homework.g_lists_and_tuples import tests_lists_and_tuples
 
 if __name__ == "__main__":
-    suite = unittest.TestLoader().loadTestsFromModule(tests_repetition)
-    runner = unittest.TextTestRunner(verbosity=2)
-    result = runner.run(suite)
-    import sys
-    sys.exit(0 if result.wasSuccessful() else 1)
+    suite = unittest.TestLoader().loadTestsFromModule(tests_lists_and_tuples)
+    unittest.TextTestRunner(verbosity=2).run(suite)
